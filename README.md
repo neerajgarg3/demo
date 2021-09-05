@@ -1,6 +1,6 @@
 # Demo
 
-Demo application
+Demo application built using Spring-boot-2.5.4.  
 
 ## Requirements
 
