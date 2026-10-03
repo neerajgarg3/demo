@@ -13,10 +13,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: 21        # match your pom's Java version
+          java-version: 11        # match your pom's Java version
           cache: maven
       - name: Cache SonarQube packages
         uses: actions/cache@v4
