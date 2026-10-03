@@ -18,17 +18,27 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private JSONPlaceHolderClient jsonPlaceHolderClient;
 
-
-	@Override
-	public List<User> getUsers(boolean includePosts) {
-		List<User> users = jsonPlaceHolderClient.getUsers();
-
+	public String riskyMethod(String input) {
 		try { 
 			Integer.parseInt("abc"); 
 		} catch (Exception e) {
 			
 		}
 		
+	    int unused = 42;                          // unused variable
+	    String password = "admin123";             // hardcoded credential (flagged as vulnerability/hotspot)
+	    try {
+	        return input.toString();
+	    } catch (Exception e) {                   // empty catch + overly generic exception
+	    }
+	    System.out.println("done");               // use a logger
+	    return null;                              // returning null instead of Optional or empty
+	}
+	
+	@Override
+	public List<User> getUsers(boolean includePosts) {
+		List<User> users = jsonPlaceHolderClient.getUsers();
+
 		if(includePosts && users != null) {
 			
 			List<Post> posts = jsonPlaceHolderClient.getPosts();
