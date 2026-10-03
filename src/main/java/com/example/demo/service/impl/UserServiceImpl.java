@@ -23,7 +23,12 @@ public class UserServiceImpl implements UserService{
 	public List<User> getUsers(boolean includePosts) {
 		List<User> users = jsonPlaceHolderClient.getUsers();
 
-
+		try { 
+			Integer.parseInt("abc"); 
+		} catch (Exception e) {
+			
+		}
+		
 		if(includePosts && users != null) {
 			
 			List<Post> posts = jsonPlaceHolderClient.getPosts();
