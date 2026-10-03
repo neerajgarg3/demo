@@ -13,6 +13,7 @@ public class DemoApplication {
 		sonarTest2();
 		sonarTest3();
 		sonarTest4();
+		sonarTest5();
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
@@ -38,6 +39,13 @@ public class DemoApplication {
     }
 
 	public static void sonarTest4() {
+        String password = "admin123";
+        int unused = 42;
+        System.out.println("debug");
+        try { Integer.parseInt("abc"); } catch (Exception e) { }
+    }
+	
+	public static void sonarTest5() {
         String password = "admin123";
         int unused = 42;
         System.out.println("debug");
