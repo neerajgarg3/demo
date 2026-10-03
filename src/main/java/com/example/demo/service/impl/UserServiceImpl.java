@@ -18,8 +18,8 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private JSONPlaceHolderClient jsonPlaceHolderClient;
 
-	public void sonarTest() {
-	    String password = "admin123";
+	public void sonarTestErrors() {
+	    String password = "admin1234";
 	    int unused = 42;
 	    System.out.println("debug");
 	    try { Integer.parseInt("abc"); } catch (Exception e) { }
